@@ -1,23 +1,76 @@
-<section>
-  <h2>Cooking Progress</h2>
-  <p>Recipe Preparation: 
-    <progress value="40" max="100">40%</progress> 40%
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extras - Vegetarian Dishes</title>
+<link rel="stylesheet" href="assets/css/styles.css">
 
-  <h2>Nutrition Balance</h2>
-  <p>Daily Protein Intake: 
-    <meter min="0" max="100" low="30" high="80" optimum="50" value="65">
-      65%
-    </meter> 65%
-  </p>
-</section>
+</head>
+<body>
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Skip to content</a>
 
-<p>Cooking Curry: 
-  <progress value="70" max="100">70%</progress> 70%
-</p>
+  <!-- Header -->
+  <header>
+    <h1>Vegetarian Dishes</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="extras.html" aria-current="page">Extras</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<p>Spice Level: 
-  <meter min="0" max="10" low="3" high="7" optimum="5" value="6">
-    Medium
-  </meter>
-   </p>
+  <!-- Main content -->
+  <main id="main">
+    <h2>Extras</h2>
+    <p>Here you’ll find some additional information about vegetarian dishes.</p>
+
+    <!-- Table -->
+    <h3>Popular Vegetarian Ingredients</h3>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Category</th>
+            <th>Health Benefit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lentils</td>
+            <td>Legume</td>
+            <td>Rich in protein</td>
+          </tr>
+          <tr>
+            <td>Spinach</td>
+            <td>Leafy green</td>
+            <td>High in iron</td>
+          </tr>
+          <tr>
+            <td>Quinoa</td>
+            <td>Grain</td>
+            <td>Gluten-free & protein-packed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Interactive details -->
+    <h3>Fun Fact</h3>
+    <details>
+      <summary>Click to learn more</summary>
+      <p>Vegetarian cuisine has been part of human culture for thousands of years, with strong roots in Indian, Mediterranean, and Asian diets.</p>
+    </details>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Vegetarian Dishes. All rights reserved.</p>
+  </footer>
+</body>
+</html>

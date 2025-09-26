@@ -1,0 +1,199 @@
+/* ===============================
+   Design Tokens (CSS Variables)
+================================= */
+:root {
+  /* Colors */
+  --bg: #ffffff;
+  --fg: #222222;
+  --muted: #666666;
+  --brand: #4CAF50;
+  --brand-contrast: #ffffff;
+
+  /* Typography */
+  --font-sans: "Segoe UI", Arial, sans-serif;
+  --font-mono: "Courier New", monospace;
+  --h1: 2rem;
+  --h2: 1.5rem;
+  --body: 1rem;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --fg: #f0f0f0;
+    --muted: #aaaaaa;
+    --brand: #81c784;
+    --brand-contrast: #000000;
+  }
+}
+
+/* ===============================
+   Base Reset & Rhythm
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--body);
+  color: var(--fg);
+  background-color: var(--bg);
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  padding: var(--space-3);
+}
+
+h1, h2, h3 {
+  margin-bottom: var(--space-2);
+}
+p, ul, ol, table {
+  margin-bottom: var(--space-2);
+}
+
+/* ===============================
+   Layout
+================================= */
+header, footer {
+  background: var(--brand);
+  color: var(--brand-contrast);
+  padding: var(--space-2);
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  list-style: none;
+  margin-top: var(--space-1);
+}
+
+nav a {
+  color: var(--brand-contrast);
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+main {
+  margin-top: var(--space-3);
+}
+
+/* ===============================
+   Components
+================================= */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: var(--space-2);
+  margin-bottom: var(--space-3);
+  background: #fafafa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: var(--space-1);
+  text-align: left;
+}
+th {
+  background: var(--brand);
+  color: var(--brand-contrast);
+}
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Media */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+/* Details */
+details {
+  margin: var(--space-2) 0;
+}
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--brand);
+}
+summary:focus {
+  outline: 2px dashed var(--brand);
+  outline-offset: 4px;
+}
+
+/* ===============================
+   Utilities
+================================= */
+.text-center {
+  text-align: center;
+}
+.mt-2 { margin-top: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ===============================
+   Skip Link
+================================= */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--brand);
+  color: var(--brand-contrast);
+  padding: var(--space-1);
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ===============================
+   Motion Preferences
+================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

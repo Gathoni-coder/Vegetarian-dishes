@@ -1,0 +1,17 @@
+# Ignore Git stuff
+.git
+.gitignore
+
+# Ignore Docker build files
+Dockerfile
+.dockerignore
+
+# Ignore local OS/editor files
+*.DS_Store
+*.swp
+*.tmp
+Thumbs.db
+
+# Ignore docs (optional)
+README.md
+
