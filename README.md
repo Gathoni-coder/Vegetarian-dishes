@@ -19,6 +19,9 @@
 **docker run -d -p 8080:80 vegetarian-dishes**     
 
 docker pull gmugo/vegetarian-dishes:latest
+
+
+
 docker run -d -p 8080:80 vegetarian-dishes
 
 
